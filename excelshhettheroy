@@ -1,0 +1,39 @@
+Data-driven testing (DDT) is taking a test, parameterizing it and then running that test with varying
+data. This allows you to run the same test case with many varying inputs, therefore increasing
+coverage from a single test. In addition to increasing test coverage, data driven testing allows the
+ability to build both positive and negative test cases into a single test. Data-driven testing allows you
+to test the form with a different set of input values to be sure that the application works as expected.
+It is convenient to keep data for automated tests in special storages that support sequential access to a
+set of data, for example, Excel sheets, database tables, arrays, and so on. Often data is stored either in
+a text file and are separated by commas or in Excel files and are presented as a table. If you need to
+add more data, you simply modify the file either in any text editor or in Microsoft Excel (in case of
+hard-coded values, you should modify both data and code).
+Data-driven test includes the following operations performed in a loop:
+• Retrieving input data from storage
+• Entering data in an application form
+• Verifying the results
+• Continuing with the next set of input
+data Pre-requisites:
+1. Java JDK 1.5 or above
+2. Apache POI library v3.8 or above
+3. Eclipse 3.2 above
+4. Selenium server-standalone-2.47.x.jar
+5. TestNG-6.9
+Data Excel
+Scenario -Open the application and login with different username and password. This data will be
+coming from excel sheet
+Step 1: The first and the foremost step is to create the test data with which we would be executing the
+test scripts. Download JAR files of Apache POI and Add Jars to your project library. Let us create an
+excel file and save it as “Credentials.xlsx” and place it in the created package location.
+40
+We will use the data excel file and the file looks as below
+Step 2: Create a POM class file under com.coe.pom name it as “Loginpage.java”. Inside a login page
+we write code to identify the webelements of login page using @FindBy annotation. To initialize the
+web elements we use initelements of page factory class. We utilize the elements by writing a method
+to it.
+Step 3: Create a ‘New Class‘file, by right click on the package com.coe.script and select New >
+Class and name it as “SuperClass.java”, and create a new class file with a name
+“ValidLoginLogout.java”.
+Step 4: Create some test data in excel that we will pass to script. For demo purpose I have taken
+username and password in excel.
+Step 5: Copy and paste the below mentioned code under com.coe.pom package class.
