@@ -1,0 +1,28 @@
+Database checkpoint for custom check
+When you create a custom check on a database, you create a standard database checkpoint in which
+you can specify which properties to check on a result set.
+You can create a custom check on a database in order to:
+● check the contents of part or the entire result set
+● edit the expected results of the contents of the result set
+● count the rows in the result set
+● count the columns in the result set
+You can create a custom check on a database using ODBC, Microsoft Query or Data Junction.
+To create a custom check on a database:
+1. Choose Insert > Database Checkpoint > Custom Check. If you are recording in Analog mode,
+press the CHECK DATABASE (CUSTOM) softkey in order to avoid extraneous mouse
+movements. Note that you can press the CHECK DATABASE (CUSTOM) softkey in Context
+Sensitive mode as well.
+2. Follow the instructions on working with the Database Checkpoint wizard, as described in
+“Working with the Database Checkpoint Wizard”
+3. If you are creating a new query, an instruction screen opens for creating a query.
+If you do not want to see this message next time you create a default database checkpoint, clear
+the Show this message next time check box.
+4. If you are using ODBC or Microsoft Query, define a query, copy a query, or specify an SQL
+statement.
+If you are using Data Junction, create a new conversion file or use an existing one.
+5. If you are using Microsoft Query and you want to be able to parameterize the SQL statement in
+the db_check statement which will be generated, then in the last wizard screen in Microsoft
+Query, click View data or edit query in Microsoft Query. Follow the instructions in
+“Parameterizing Standard Database Checkpoints”
+6. WinRunner takes several seconds to capture the database query and restore the WinRunner
+window.The Check Database dialog box opens
